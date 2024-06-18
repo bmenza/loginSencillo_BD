@@ -1,0 +1,12 @@
+CREATE DATABASE IF NOT EXISTS login_sencillo
+CHARACTER SET utf8mb4
+COLLATE utf8mb4_spanish_ci;
+
+USE login_sencillo;
+
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    usuario VARCHAR(50) NOT NULL UNIQUE,
+    contrasena VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
