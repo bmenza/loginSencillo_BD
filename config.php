@@ -2,11 +2,12 @@
 // config.php
 $host = '127.0.0.1';
 $db = 'login_sencillo';
+$port='3306'; // cambiar si no tienen el puerto por defecto
 $user = 'root';
-$pass = '';
+$pass = ''; // agregar contraseña si tienen
 $charset = 'utf8mb4';
 
-$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+$dsn = "mysql:host=$host;port=$port;dbname=$db;charset=$charset";
 $options = [
     PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
